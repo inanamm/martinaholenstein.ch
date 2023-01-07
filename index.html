@@ -1,0 +1,134 @@
+<!doctype html>
+<!-- MARTINA HOLENSTEIN — 2022 -->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>martina holenstein – visual communication</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pso1ctu.css">
+    <link rel="icon" type="image/png" href="assets/icon2.png">
+</head>
+
+<body id="landing-page" data-barba="wrapper">
+    <div data-barba="container" data-barba-namespace="home">
+        <header>
+            <nav>
+                <a href="about.html">
+                    <h1>martina holenstein</h1>
+                    <p>visual communication</p>
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <ul class="projektliste">
+                <li class="marquee3k liste" data-speed="0.9" data-pausable="true">
+                    <a href="insidethebox.html">— inside the box — 50.6 GB — 0.26 KG&nbsp;</a>
+                </li>
+
+                <li class="marquee3k liste" data-speed="0.7" data-pausable="true">
+                    <a href="unspoken.html">unspoken — 1.34 GB — 0.00 KG —&nbsp;</a>
+                </li>
+
+                <li class="marquee3k liste" data-speed="0.6" data-pausable="true">
+                    <a href="veilingandidentity.html">0.12 GB — 0.35 KG — veiling and identity —&nbsp;</a>
+                </li>
+
+                <li class="marquee3k liste" data-speed="0.7" data-pausable="true">
+                    <a href="filmpodium_bunuel.html">0.00 KG — filmpodium luis buñuel — 0.01 GB —&nbsp;</a>
+                </li>
+
+                <li class="marquee3k liste" data-speed="0.8" data-pausable="true">
+                    <a href="langnaujazznights.html">— 0.00 KG — langnau jazz nights — 0.01 GB&nbsp;</a>
+                </li>
+
+                <li class="marquee3k liste" data-speed="0.7" data-pausable="true">
+                    <a href="dyada.html">0.00 KG — dyada — 0.01 GB —&nbsp;</a>
+                </li>
+
+                <li class="marquee3k liste" data-speed="0.9" data-pausable="true">
+                    <a href="nextterritory.html">the next territory — 0.01 GB — 0.01 KG —&nbsp;</a>
+                </li>
+
+                <li class="marquee3k liste" data-speed="0.9" data-pausable="true">
+                    <a href="schoen.html">schön — 0.00 GB — 0.03 KG —&nbsp;</a>
+                </li>
+
+                <li class="marquee3k liste" data-speed="0.7" data-pausable="true">
+                    <a href="amphitheatre.html">— amphitheatre — 0.02 GB — 0.24 KG&nbsp;</a>
+                </li>
+
+                <li class="marquee3k liste" data-speed="0.8" data-pausable="true">
+                    <a href="encounters.html">0.00 KG — encounters — 1.79 GB —&nbsp;</a>
+                </li>
+
+                <li>
+                    <script language="javascript" type="text/javascript">
+                        var date = new Date();
+                        document.write(`${date.getDate()} ${(date.getMonth() + 1)} ${(date.getYear() + 1900 - 2000)}`);
+                    </script>
+                </li>
+            </ul>
+        </main>
+    </div>
+
+    <script src="marquee3k/marquee3k.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+    <script type="text/javascript">
+        barba.init({
+            views: [{
+                namespace: 'home',
+                beforeEnter() {
+                    console.log("beforeEnter")
+                    var elements = window.document.getElementsByClassName("marquee3k__wrapper")
+                    console.log("col before 1", elements)
+                    for (var i = elements.length; i--;) {
+                        console.log(elements[i])
+                        elements[i].remove() 
+                    }
+                    console.log("col before 2", elements)
+                },
+                afterEnter() {
+                    console.log("afterEnter")
+
+                    Marquee3k.init();
+                },
+                beforeLeave() {
+                    // console.log("beforeLeave")
+                    // console.log("beforeEnter")
+                    // var elements = window.document.getElementsByClassName("marquee3k__wrapper")
+                    // console.log("col before 1", elements)
+                    // for (const element in elements) {
+                    //     element.delete()
+                    // }
+                    // console.log("col before 2", elements)
+                },
+                afterLeave() {
+                    console.log("afterLeave")
+                    // Marquee3k.init();
+                },
+            }],
+            transitions: [{
+                name: 'opacity-transition',
+                leave(data) {
+                    return gsap.to(data.current.container, {
+                        opacity: 0
+                    });
+                },
+                enter(data) {
+                    return gsap.from(data.next.container, {
+                        opacity: 0
+                    });
+                }
+            }]
+        });
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<!-- MARTINA HOLENSTEIN — 2022 -->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>martina holenstein</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pso1ctu.css">
+</head>
+
+<body id="about-page" data-barba="wrapper">
+    <div data-barba="container" data-barba-namespace="about">
+        <header>
+            <a href="index.html">projects</a>
+            <h1>martina holenstein</h1>
+        </header>
+
+        <main>
+            <p>swiss graphic designer currently living and working in zurich. fascinated by codes, editorial design, web
+                and typography, with a big heart for print, bookbinding and analysis of all kinds.
+            </p>
+            <br>
+            <p>
+                <a href="mailto:hello@martinaholenstein.ch">say hi!</a>
+                <br>
+                <a href="https://www.instagram.com/inanamm/" target="_blank">@inanamm</a>
+            </p>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script type="text/javascript">
+        barba.init({
+            transitions: [{
+                name: 'opacity-transition',
+                leave(data) {
+                    return gsap.to(data.current.container, {
+                        opacity: 0
+                    });
+                },
+                enter(data) {
+                    return gsap.from(data.next.container, {
+                        opacity: 0
+                    });
+                }
+            }]
+        });
+    </script>
+</body>
+
+</html>

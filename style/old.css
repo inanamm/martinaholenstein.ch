@@ -1,0 +1,451 @@
+/* @import "_reset.css";
+
+:root {
+    cursor: crosshair;
+}
+
+:root a {
+    cursor: crosshair;
+} */
+
+/* img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+html, body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-bottom: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    color: green;
+}
+
+body {
+    padding-left: 1em;
+    padding-right: 1em;
+} */
+
+/* h1,h2 {
+    font-size: 3.125em;
+    hyphens: auto;
+}
+
+a {
+    color: green;
+    font-style: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c1dec1;
+} */
+
+/* header {
+    padding-bottom: 1em;
+}
+
+.mainheader a {
+    font-size: 1.25em;
+
+} */
+
+/* .mainmainheader {
+    padding-top: 1em;
+    display: block;
+    margin-bottom: 3em;
+}
+
+.mainmainheader h1, p {
+    font-size: 1.25em;
+}
+
+.mainmainheader nav {
+    width: fit-content;
+} */
+
+/* .projektliste {
+    white-space: nowrap;
+    hyphens: none;
+}
+
+.projektliste li:last-child {
+    width: 100vw;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    bottom: 0;
+    z-index: 3;
+    font-size: 1.250em;
+} */
+
+/* .projekttext {
+    padding-right: 1em;
+    font-size: 1.250em;
+    letter-spacing: 0.01em;
+    hyphens: auto;
+}
+
+.projekttext a {
+    text-decoration: underline;
+} */
+
+/* .liste {
+    font-size: 3.125em;
+}
+
+.liste:hover a {
+    color: #c1dec1;
+} */
+
+/* .aboutheader {
+    font-size: 2.9em;
+}
+
+.abouttext p {
+    font-size: 1.250em;
+    padding-right: 1em;
+    hyphens: auto;
+    line-height: 1.05em;
+}
+
+
+.abouttext {
+    position: absolute;
+    bottom: 1em;
+}
+
+
+.abouttext a {
+    text-decoration: underline;
+} */
+
+/* .aboutmainheader {
+    padding-top: 1em;
+    display: block;
+    font-size: 3.125;
+} */
+
+/* .textabstand {
+    margin-bottom: 1em;
+} */
+
+/* .textoben {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em 0;
+    height: 100vh;
+} */
+
+/* .bilderhoch {
+    padding-top: 1em;
+    padding-right: 1em;
+    width: 97.4vw;
+}
+
+.bilderquer {
+    padding-top: 1em;
+    padding-right: 1em;
+    width: 97.5vw;
+}
+
+.videounten {
+    padding-top: 1em;
+    width: 99%;
+} */
+
+/* a::selection {
+    color: white;
+}
+
+li::selection {
+    color: white;
+}
+
+p::selection {
+    color: white;
+}
+
+.abouttext p::selection {
+    color: white;
+}
+
+.aboutheader::selection {
+    color: white;
+}
+
+.abouttext a::selection {
+    color: white;
+}
+
+.aboutmainheader a::selection {
+    color: white;
+}
+
+.projekttitel p::selection {
+    color: white;
+} */
+
+
+
+/* MARQUEE3K TRY
+.container {
+    width: 120vw;
+    position: relative;
+    left: -10vw;
+}
+
+.marquee3k {
+    padding: 0.2rem 0;
+}
+
+.marquee3k__copy {
+    padding-right: 0.5rem;
+} */
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (orientation: landscape) {
+    .bilderunten.portrait {
+        padding-top: 1em;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .bilderunten img {
+        object-fit: contain;
+        object-position: left;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bilderquer {
+        max-height: 100vh;
+        padding-bottom: 1em;
+    }
+
+    .projektliste {
+        white-space: nowrap;
+        hyphens: none;
+        position: absolute;
+        top: 8.750em;
+    }
+
+    .projekttext {
+        max-width: 75vw;
+    }
+}
+
+@media (min-width: 320px) {
+    body {
+        overflow-x: hidden;
+        height: 100vh;
+        max-width: 100%;
+        letter-spacing: 0.02em;
+        /* font-size: 0.7em; */
+    }
+
+    /* h1,h2 {
+        font-size: 2em;
+    } */
+
+}
+
+@media (orientation: landscape) and (min-width: 320px) {
+    body {
+        letter-spacing: 0.02em;
+        /* font-size: 0.55em; */
+        overflow-x: hidden;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 500px) {
+    body {
+        letter-spacing: 0.02em;
+        /* font-size: 0.75em; */
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width: 720px) {
+    body {
+        letter-spacing: 0.02em;
+        /* font-size: 0.9em; */
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        /* font-size: 1.12em; */
+    }
+
+    .abouttext {
+        max-width: 80vw;
+    }
+}
+
+@media (min-width: 1600px) {
+    body {
+        /* font-size: 1.25em; */
+    }
+
+    .abouttext {
+        max-width: 65vw;
+    }
+}
+
+
+@import "_reset.css";
+
+:root {
+    cursor: crosshair;
+}
+
+:root a {
+    cursor: crosshair;
+}
+
+*::selection {
+    color: white;
+}
+
+html, body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    color: green;
+}
+
+body {
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1,h2 {
+    font-size: 3.125em;
+    hyphens: auto;
+}
+
+a {
+    color: green;
+    font-style: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c1dec1;
+}
+
+/* Landing page */
+#landing-page header {
+    padding-top: 1em;
+    display: block;
+    margin-bottom: 3em;
+}
+
+#landing-page header h1, p {
+    font-size: 1.25em;
+}
+
+#landing-page header nav {
+    width: fit-content;
+}
+
+.projektliste {
+    white-space: nowrap;
+    hyphens: none;
+}
+
+.projektliste li:last-child {
+    width: 100vw;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    bottom: 0;
+    z-index: 3;
+    font-size: 1.250em;
+}
+
+.liste {
+    font-size: 3.125em;
+}
+
+.liste:hover a {
+    color: #c1dec1;
+}
+
+/* about page */
+#about-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#about-page header a {
+    display: block;
+    padding-top: 1em;
+    font-size: 1.25em;
+}
+
+#about-page header h1 {
+    font-size: 2.9em;
+}
+
+#about-page main a {
+    text-decoration: underline;
+}
+
+/* project pages */
+.textoben {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em 0;
+    height: 100vh;
+}
+
+.project-page header {
+    padding-bottom: 1em;
+}
+
+.project-page header nav {
+    font-size: 1.25em;
+}
+
+.project-page main {
+    padding-right: 1em;
+    letter-spacing: 0.01em;
+    hyphens: auto;
+}
+
+.project-page .projekttext a {
+    text-decoration: underline;
+}
+
+.project-page .image-landscape:not(:last-child) {
+    padding-bottom: 1em;
+}
+
+.project-page .image-portrait {
+    padding-bottom: 1em;
+    width: 50vw;
+}
